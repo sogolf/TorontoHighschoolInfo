@@ -1,0 +1,117 @@
+{
+  "timeline": [
+    {
+      "month": "September",
+      "emoji": "🍂",
+      "year": "Grade 8",
+      "description": "Start gathering information and reflecting on what you want.",
+      "tasks": [
+        { "id": "sep-1", "text": "Talk to your Grade 8 teacher about your academic strengths and interests", "tip": "Ask for an honest assessment — teachers often see talents you don't notice in yourself." },
+        { "id": "sep-2", "text": "Find your designated home school using the TDSB School Locator (tdsb.on.ca) or TCDSB website (tcdsb.org)", "tip": "Enter your home address on your board's website to confirm which high school you're assigned to." },
+        { "id": "sep-3", "text": "Start a list of interests and passions — what subjects or activities energize you?", "tip": "Include things outside school too: hobbies, sports, creative pursuits." },
+        { "id": "sep-4", "text": "Ask a parent or guardian to explore the TDSB or TCDSB specialized programs page", "tip": "TDSB: tdsb.on.ca → Programs. TCDSB: tcdsb.org → Programs. Both boards publish their full list of specialized programs and application timelines." },
+        { "id": "sep-5", "text": "If interested in gifted programs, speak to your principal about the IPRC referral process through TDSB or TCDSB", "tip": "The IPRC process (including psycho-educational assessment) can take 2–3 months — start early to meet secondary school placement deadlines!" }
+      ]
+    },
+    {
+      "month": "October",
+      "emoji": "🎃",
+      "year": "Grade 8",
+      "description": "Attend information events and narrow down your options.",
+      "tasks": [
+        { "id": "oct-1", "text": "Attend your TDSB or TCDSB Grade 8 information night for high school options", "tip": "Both boards host annual information events for Grade 8 families. Check tdsb.on.ca or tcdsb.org for dates — they typically run October through November." },
+        { "id": "oct-2", "text": "Visit the websites of 2–3 Toronto schools you're curious about", "tip": "Look for: program listings, clubs and sports, virtual tours, and student testimonial videos. Both TDSB and TCDSB school profiles are on their board websites." },
+        { "id": "oct-3", "text": "Talk to Grade 9 students or older teens you know — ask what they wish they'd known", "tip": "Personal experience is often the most honest source of information about a school's culture." },
+        { "id": "oct-4", "text": "Check TDSB and TCDSB application deadlines for specialized programs you're considering", "tip": "Most TDSB specialized program applications open in November and close in January. TCDSB deadlines are typically December–January. Dates vary by program." },
+        { "id": "oct-5", "text": "If applying to arts programs, start working on or selecting portfolio pieces", "tip": "Visual arts portfolios typically need 3–6 pieces. Choose work that shows range and your best technical skill." }
+      ]
+    },
+    {
+      "month": "November",
+      "emoji": "❄️",
+      "year": "Grade 8",
+      "description": "Attend Open Houses and begin preparing applications.",
+      "tasks": [
+        { "id": "nov-1", "text": "Attend Open Houses at TDSB and TCDSB schools you're considering (most are held November–January)", "tip": "Open Houses are your best chance to see the school, meet current students, and speak with teachers in specialized programs." },
+        { "id": "nov-2", "text": "Submit applications for TDSB or TCDSB specialized programs that open in November", "tip": "TDSB applications are submitted through tdsb.on.ca. TCDSB applications through tcdsb.org. Some programs have school-specific forms — read carefully." },
+        { "id": "nov-3", "text": "Ask a teacher for a reference letter if your application requires one", "tip": "Give teachers at least 2 weeks' notice. Share your interests and the specific Toronto program you're applying to so they can write specifically." },
+        { "id": "nov-4", "text": "If auditioning for music/drama/dance at a TDSB or TCDSB arts school, begin preparing your audition material", "tip": "Most auditions require a 1–2 minute prepared piece. Practice in front of a mirror or record yourself." },
+        { "id": "nov-5", "text": "Discuss your top Toronto school options with a parent or guardian", "tip": "Make sure everyone is aligned on TTC commute logistics, application requirements, and decision timelines." }
+      ]
+    },
+    {
+      "month": "December",
+      "emoji": "🎄",
+      "year": "Grade 8",
+      "description": "Submit applications and confirm your choices before the winter break.",
+      "tasks": [
+        { "id": "dec-1", "text": "Submit any TDSB or TCDSB specialized program applications with December deadlines", "tip": "Don't wait until the last day — submit early and keep a copy of your confirmation email or application number." },
+        { "id": "dec-2", "text": "If applying out of area, check when TDSB or TCDSB transfer applications open (usually January)", "tip": "Out-of-area transfer applications are separate from specialized program applications and are handled by your board's Student Placement office." },
+        { "id": "dec-3", "text": "Finalize your portfolio or audition prep before the holiday break", "tip": "You'll have less time to prepare in January once school resumes." },
+        { "id": "dec-4", "text": "Confirm your home school registration — verify your TDSB or TCDSB catchment address", "tip": "Even if you plan to attend your home school, confirm the registration process with your local TDSB or TCDSB school office." },
+        { "id": "dec-5", "text": "Make a list of your top 2–3 Toronto school choices and rank them in order of preference", "tip": "Having a clear ranking helps you make decisions quickly when offers arrive in the spring." }
+      ]
+    },
+    {
+      "month": "January",
+      "emoji": "❄️",
+      "year": "Grade 8",
+      "description": "Meet the main application deadline month — most TDSB and TCDSB programs close in January.",
+      "tasks": [
+        { "id": "jan-1", "text": "Submit remaining TDSB or TCDSB specialized program applications (most close January–February)", "tip": "This is the highest-stakes month. Double-check all requirements — TDSB at tdsb.on.ca, TCDSB at tcdsb.org — before submitting." },
+        { "id": "jan-2", "text": "Submit out-of-area transfer application to TDSB or TCDSB (if applicable)", "tip": "TDSB: contact your local school or Student Support Services. TCDSB: contact the Student Placement office at tcdsb.org. Include a specific, clear reason for your request." },
+        { "id": "jan-3", "text": "Attend any remaining TDSB or TCDSB school Open Houses", "tip": "Some Toronto schools host Open Houses in January as a final chance before applications close." },
+        { "id": "jan-4", "text": "Follow up with teachers who wrote reference letters to confirm they submitted", "tip": "A polite thank-you note and a check-in goes a long way." },
+        { "id": "jan-5", "text": "Confirm IPRC assessment appointment through TDSB or TCDSB (if pursuing gifted identification)", "tip": "If you haven't been contacted yet, follow up with your school's Special Education resource teacher or contact your board's Special Education department directly." }
+      ]
+    },
+    {
+      "month": "February / March",
+      "emoji": "🌸",
+      "year": "Grade 8",
+      "description": "Auditions, assessments, and waiting for decisions.",
+      "tasks": [
+        { "id": "feb-1", "text": "Attend scheduled auditions or assessments for TDSB or TCDSB specialized programs", "tip": "Arrive early, bring everything you need, and remember: they're assessing potential, not just current skill." },
+        { "id": "feb-2", "text": "Follow up on out-of-area transfer status with TDSB or TCDSB if you haven't heard back", "tip": "A polite email to your board's Student Placement office is appropriate if you haven't received a response within 4–6 weeks." },
+        { "id": "feb-3", "text": "Complete any IB academic assessments or interviews if scheduled", "tip": "TDSB and TCDSB IB programs may invite shortlisted students for a conversation about their goals and study habits." },
+        { "id": "feb-4", "text": "Keep your Grade 8 marks strong — TDSB and TCDSB programs may check your final Grade 8 marks", "tip": "Even after submitting applications, your academic performance still matters for final decisions." },
+        { "id": "feb-5", "text": "Talk to your school counselor if you're feeling anxious about the process", "tip": "It's completely normal to feel uncertain. Remember: all four options lead to a great Toronto high school experience." }
+      ]
+    },
+    {
+      "month": "April / May",
+      "emoji": "🌻",
+      "year": "Grade 8",
+      "description": "Receive offers and make your final decision.",
+      "tasks": [
+        { "id": "apr-1", "text": "Open your TDSB or TCDSB offer letters or acceptance notifications when they arrive", "tip": "Decisions are typically sent by email or through the application portal. Check your inbox and spam folder." },
+        { "id": "apr-2", "text": "If accepted to a specialized program, confirm your acceptance by the deadline", "tip": "Most TDSB and TCDSB programs give you 1–2 weeks to accept. Miss the deadline and your spot may go to the waitlist." },
+        { "id": "apr-3", "text": "If waitlisted, contact the school to confirm your status and timeline", "tip": "Spots do open up. Stay polite and express continued interest to the school's main office." },
+        { "id": "apr-4", "text": "If rejected, finalize your plan to attend your TDSB or TCDSB home school or out-of-area choice", "tip": "A rejection from a specialized program doesn't define you — many of Toronto's most successful people attended their neighbourhood school." },
+        { "id": "apr-5", "text": "Make your final school decision and notify your elementary school principal", "tip": "Your elementary school submits Grade 8 records to your receiving high school through the TDSB or TCDSB — they need to know where you're going." }
+      ]
+    },
+    {
+      "month": "May / June",
+      "emoji": "🎓",
+      "year": "Grade 8 → 9",
+      "description": "Transition and prepare for September.",
+      "tasks": [
+        { "id": "may-1", "text": "Register at your chosen Toronto high school (if not done automatically through TDSB or TCDSB)", "tip": "Some schools host Grade 9 registration days in May or June. Bring your report card and any required documents (e.g., baptismal certificate for TCDSB)." },
+        { "id": "may-2", "text": "Attend Grade 9 orientation day at your Toronto high school", "tip": "Orientation days help you meet your new peers, learn the building layout, and start to feel at home." },
+        { "id": "may-3", "text": "Review your Grade 9 course selection form with a parent or guardian", "tip": "Your course choices in Grade 9 matter! Ask the school's guidance counselor if you have questions about destination codes (U, C, E, O)." },
+        { "id": "may-4", "text": "Connect with incoming Grade 9 students through school social media or orientation events", "tip": "Many Toronto high schools have Instagram accounts or Discord servers for incoming students to meet before September." },
+        { "id": "may-5", "text": "Celebrate! You navigated one of the most important decisions of your school life", "tip": "Whatever Toronto school you're attending — high school is a fresh start. Make the most of it." }
+      ]
+    }
+  ],
+  "comparisonCriteria": [
+    { "id": "program", "label": "Program / Focus" },
+    { "id": "board", "label": "TDSB or TCDSB?" },
+    { "id": "commute", "label": "TTC commute time" },
+    { "id": "friends", "label": "Friends going there" },
+    { "id": "application", "label": "Application required?" },
+    { "id": "deadline", "label": "Application deadline" },
+    { "id": "notes", "label": "My notes" }
+  ]
+}

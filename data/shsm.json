@@ -1,0 +1,96 @@
+{
+  "description": "Toronto high schools — in both the TDSB and TCDSB — offer a wide range of specialized programs beyond the regular curriculum. These programs require an application, audition, portfolio, or assessment and are offered at specific designated schools across the city.",
+  "applyNote": "Most TDSB and TCDSB specialized program applications open in November–December and close in January–February of your Grade 8 year. Visit tdsb.on.ca or tcdsb.org for exact dates and application portals.",
+  "programs": [
+    {
+      "id": "arts-visual",
+      "name": "Visual Arts",
+      "icon": "🎨",
+      "description": "Draw, paint, sculpt, and create using a range of media and techniques. Visual arts programs build technical skill, artistic voice, and portfolio strength for post-secondary art programs. Toronto schools with strong visual arts programs include Etobicoke School of the Arts (TDSB), Rosedale Heights School of the Arts (TDSB), and Cardinal Carter Academy for the Arts (TCDSB).",
+      "pathways": ["specialized"],
+      "applicationProcess": "Apply through the TDSB or TCDSB specialized program portal. Portfolio submission showing original artwork: typically 3–5 pieces of your best work, a sketchbook, and sometimes a live drawing component. TDSB applications: tdsb.on.ca. TCDSB applications: tcdsb.org.",
+      "whatToExpect": "Dedicated art classes every day, gallery shows, mentorship by professional artists, and a strong portfolio by the time you graduate.",
+      "careers": ["Graphic Designer", "Illustrator", "Art Director", "Animator", "Architect", "UX Designer"]
+    },
+    {
+      "id": "arts-music",
+      "name": "Music Program",
+      "icon": "🎵",
+      "description": "Instrumental or vocal music programs develop performance skills, music theory, and ensemble experience. Toronto's dedicated music programs include York Memorial Collegiate (TDSB) and programs at several TDSB and TCDSB schools across the city.",
+      "pathways": ["specialized"],
+      "applicationProcess": "Apply through the TDSB or TCDSB specialized program portal. Live audition on your primary instrument or voice: usually includes scales, a prepared piece, and sight-reading. No prior formal music education required for some programs.",
+      "whatToExpect": "Daily music classes, concerts, competitions, and the opportunity to perform in ensembles with serious musicians your age.",
+      "careers": ["Musician/Performer", "Music Producer", "Music Teacher", "Sound Engineer", "Composer", "Arts Administrator"]
+    },
+    {
+      "id": "arts-drama",
+      "name": "Drama & Theatre Arts",
+      "icon": "🎭",
+      "description": "Performance, directing, stage design, and script writing. Drama programs build confidence, public speaking, and creative collaboration. Several TDSB schools including Rosedale Heights School of the Arts and Etobicoke School of the Arts offer strong drama and theatre arts streams. TCDSB's Cardinal Carter Academy for the Arts and Michael Power/St. Joseph High School also offer theatre arts.",
+      "pathways": ["specialized"],
+      "applicationProcess": "Apply through the TDSB or TCDSB specialized program portal. Audition with a prepared monologue (usually 1–2 minutes) and cold reading. Some programs include an improvisation component.",
+      "whatToExpect": "Mainstage productions, technical theatre training, script development, and the chance to direct student scenes.",
+      "careers": ["Actor/Performer", "Film Director", "Teacher", "Lawyer", "Communications Specialist", "Event Director"]
+    },
+    {
+      "id": "arts-dance",
+      "name": "Dance Program",
+      "icon": "💃",
+      "description": "Technique, choreography, and performance in styles ranging from contemporary to hip hop. Toronto's arts schools offer dance programs that are physically rigorous and creatively demanding. Etobicoke School of the Arts (TDSB) is particularly well-known for its dance program.",
+      "pathways": ["specialized"],
+      "applicationProcess": "Apply through the TDSB specialized program portal at tdsb.on.ca. Movement audition showing physical ability, rhythm, and performance quality. No specific style training usually required — they assess potential.",
+      "whatToExpect": "Daily dance classes, studio time, performances, and often guest artists from professional companies.",
+      "careers": ["Professional Dancer", "Choreographer", "Dance Teacher", "Fitness Instructor", "Physical Therapist", "Film/TV Performer"]
+    },
+    {
+      "id": "ib",
+      "name": "International Baccalaureate (IB)",
+      "icon": "🌐",
+      "description": "The IB Diploma Programme is a rigorous, globally recognized two-year curriculum (Grades 11–12). In Toronto, TDSB IB schools include Marc Garneau Collegiate Institute, Leaside High School, and others. TCDSB offers IB at Neil McNeil High School. IB grads have a strong advantage in competitive university admissions worldwide.",
+      "pathways": ["specialized", "gifted"],
+      "applicationProcess": "Apply through the TDSB or TCDSB specialized program portal. Academic assessment of current Grade 7/8 marks (usually 75%+ minimum), teacher reference letters, and sometimes an interview or written component. Apply in Grade 8 for Grades 9–12 IB entry.",
+      "whatToExpect": "A challenging, internationally-minded curriculum covering 6 subject areas, Theory of Knowledge (TOK), a 4,000-word Extended Essay, and 150 hours of Creativity, Activity, Service (CAS).",
+      "careers": ["All professional fields — IB is accepted worldwide and respected at top universities"]
+    },
+    {
+      "id": "french-immersion",
+      "name": "Extended French / French Immersion",
+      "icon": "🇫🇷",
+      "description": "Study core subjects in French, building fluency and earning Ontario's French Immersion Certificate on your OSSD. Both TDSB and TCDSB offer Extended French and French Immersion at several schools across Toronto. Bilingualism is a major career advantage, especially in the federal government and bilingual business sectors.",
+      "pathways": ["specialized", "local"],
+      "applicationProcess": "TDSB: Many schools offer Extended French — check the TDSB website for French Immersion designated schools. Some programs are offered at your local school with no application required; others at designated schools may require a placement assessment. TCDSB: French Immersion is available at select Catholic schools — contact tcdsb.org for the current list and application process.",
+      "whatToExpect": "Core subjects (history, science, geography) taught in French alongside English courses. Increasingly bilingual environment as you advance.",
+      "careers": ["Federal Government", "Diplomat", "Bilingual Business", "Translation/Interpretation", "Teaching", "Healthcare in bilingual regions"]
+    },
+    {
+      "id": "sports",
+      "name": "Elite Sports Academy",
+      "icon": "⚽",
+      "description": "Train at an elite level in your sport while completing your OSSD. TDSB and TCDSB schools host sports academies in football, basketball, soccer, volleyball, hockey, and more. Academies provide coaching, facilities, and flexible scheduling for competition travel.",
+      "pathways": ["specialized"],
+      "applicationProcess": "Apply through the specific school's sports academy. Tryout or coach recommendation. Assessments include on-field/court performance, athletic testing, and sometimes an academic review. Contact the school directly or check the TDSB/TCDSB school profiles for academy details.",
+      "whatToExpect": "Daily practice or training sessions, game and tournament schedules built into your timetable, strength/conditioning coaching, and academic support for athletes.",
+      "careers": ["Professional Athlete", "Coach", "Athletic Therapist", "Sports Manager", "Physical Education Teacher", "Kinesiology/Health Professions"]
+    },
+    {
+      "id": "stem",
+      "name": "Technology & STEM Academy",
+      "icon": "💻",
+      "description": "Computer science, robotics, engineering design, and applied technology programs that go well beyond what regular schools offer. TDSB's Marc Garneau Collegiate Institute is known for its Advanced Placement (AP) and STEM offerings. Western Technical-Commercial School (TDSB) offers strong technology programs. Danforth CTI (TDSB) focuses on college-tech pathways.",
+      "pathways": ["specialized", "gifted"],
+      "applicationProcess": "Apply through the TDSB specialized program portal at tdsb.on.ca. Usually includes a demonstrated interest in technology, application form, and sometimes a project submission or academic review. TCDSB technology programs are available at select schools — check tcdsb.org.",
+      "whatToExpect": "Project-based learning, hackathons, robotics competitions (FIRST Robotics), coding courses, and often dual-credit opportunities with George Brown College or Seneca Polytechnic.",
+      "careers": ["Software Engineer", "Robotics Engineer", "Data Scientist", "Cybersecurity Analyst", "Game Developer", "Systems Architect"]
+    },
+    {
+      "id": "dual-credit",
+      "name": "Dual Credit Programs",
+      "icon": "📜",
+      "description": "Earn both a high school credit and a college credit simultaneously through a partnership with Toronto-area colleges including George Brown College, Seneca Polytechnic, Centennial College, or Humber College. Available at many TDSB and TCDSB schools — not always a separate application.",
+      "pathways": ["specialized", "local"],
+      "applicationProcess": "Usually available to Grades 11–12 students through your guidance counselor at any TDSB or TCDSB school. Inquire directly — many local Toronto schools offer these through their college partnerships.",
+      "whatToExpect": "A college-level course taught on-site at your high school or at the college campus. Credit counts toward both your OSSD and a future college program.",
+      "careers": ["All fields with college programs — tech, health, business, culinary arts, and more"]
+    }
+  ]
+}

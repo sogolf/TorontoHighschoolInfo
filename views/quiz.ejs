@@ -1,0 +1,51 @@
+<%- include('header', { title: 'Pathway Quiz', currentPage: 'quiz' }) %>
+
+<div class="quiz-shell">
+
+  <div class="text-center mb-3">
+    <h1>Find Your Pathway</h1>
+    <p style="color:var(--gray-500)">Answer 6 short questions — no accounts, no judgements.</p>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-label">
+    <span id="section-label">Section 1 of 3</span>
+    <span id="q-counter">Question 1 of 12</span>
+  </div>
+  <div class="progress-bar-outer" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="12" aria-label="Quiz progress">
+    <div class="progress-bar-inner" id="progress-bar" style="width:8.33%"></div>
+  </div>
+
+  <!-- Quiz form -->
+  <form method="POST" action="/results" id="quiz-form">
+    <% quiz.questions.forEach(function(q, idx) { %>
+    <div class="quiz-step <%= idx === 0 ? 'active' : '' %>" id="step-<%= idx %>">
+      <div class="quiz-section-label"><%= q.sectionLabel %></div>
+      <div class="quiz-question-text"><%= q.icon %> <%= q.text %></div>
+      <div class="quiz-options" role="group" aria-label="<%= q.text %>">
+        <% q.options.forEach(function(opt, oi) { %>
+        <label class="quiz-option" id="label-<%= q.id %>-<%= oi %>">
+          <input type="radio" name="answers[q<%= q.id %>]" value="<%= oi %>" required>
+          <span class="option-icon"><%= opt.icon %></span>
+          <span class="option-label"><%= opt.label %></span>
+        </label>
+        <% }) %>
+      </div>
+    </div>
+    <% }) %>
+
+    <!-- Navigation -->
+    <div class="quiz-nav no-print">
+      <button type="button" class="btn btn-outline" id="btn-back" disabled onclick="quizNav(-1)">← Back</button>
+      <span class="quiz-counter" id="step-display">1 / 12</span>
+      <button type="button" class="btn btn-primary" id="btn-next" onclick="quizNav(1)">Next →</button>
+    </div>
+  </form>
+
+  <div class="info-box info-box-teal mt-3">
+    <strong>🔒 Your privacy:</strong> No answers are stored. Results are calculated in your browser and sent only once to generate your recommendation.
+  </div>
+</div>
+
+<script src="/js/quiz.js"></script>
+<%- include('footer') %>

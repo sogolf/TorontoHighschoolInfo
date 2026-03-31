@@ -1,0 +1,87 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "section": "interests",
+      "sectionLabel": "Your Interests & Strengths",
+      "text": "Which class or activity do you look forward to most in school?",
+      "icon": "📚",
+      "options": [
+        { "label": "Math, Science, or English — I like thinking hard", "icon": "🔬", "scores": { "gifted": 2, "specialized": 1 } },
+        { "label": "Art, Music, Drama, or Dance", "icon": "🎨", "scores": { "specialized": 3 } },
+        { "label": "Gym, Technology, or Hands-on projects", "icon": "⚽", "scores": { "local": 2, "specialized": 1 } },
+        { "label": "I like most classes — nothing really stands out yet", "icon": "🤷", "scores": { "local": 3, "outofarea": 1 } }
+      ]
+    },
+    {
+      "id": 2,
+      "section": "interests",
+      "sectionLabel": "Your Interests & Strengths",
+      "text": "If someone described you to a stranger, which would fit best?",
+      "icon": "🪞",
+      "options": [
+        { "label": "The one who reads everything and asks a million questions", "icon": "📖", "scores": { "gifted": 3 } },
+        { "label": "The creative one — always making something", "icon": "✏️", "scores": { "specialized": 3 } },
+        { "label": "The social one — friends everywhere, always involved", "icon": "🤝", "scores": { "local": 2, "outofarea": 2 } },
+        { "label": "The well-rounded one — a bit of everything", "icon": "⭐", "scores": { "local": 3 } }
+      ]
+    },
+    {
+      "id": 3,
+      "section": "preferences",
+      "sectionLabel": "Your Preferences & Situation",
+      "text": "How far would you comfortably travel to school every day?",
+      "icon": "🚌",
+      "options": [
+        { "label": "Walking distance only — close to home", "icon": "🚶", "scores": { "local": 3 } },
+        { "label": "Up to 30 minutes on the TTC — that's fine", "icon": "🚇", "scores": { "outofarea": 2, "specialized": 1 } },
+        { "label": "Up to 60 minutes — worth it for the right program", "icon": "🚍", "scores": { "specialized": 3, "gifted": 2 } },
+        { "label": "Distance doesn't matter if it's the right fit", "icon": "✈️", "scores": { "gifted": 3, "specialized": 2 } }
+      ]
+    },
+    {
+      "id": 4,
+      "section": "preferences",
+      "sectionLabel": "Your Preferences & Situation",
+      "text": "How do you feel about doing an audition, portfolio, or application to get into a school?",
+      "icon": "📋",
+      "options": [
+        { "label": "I'd love it — I want to prove myself", "icon": "🌟", "scores": { "specialized": 3, "gifted": 1 } },
+        { "label": "I'd do it if I believed in the program enough", "icon": "👍", "scores": { "specialized": 2, "gifted": 2 } },
+        { "label": "I'd prefer guaranteed enrollment — applications stress me out", "icon": "😓", "scores": { "local": 3 } },
+        { "label": "I'd apply if the process is through the school board", "icon": "📝", "scores": { "outofarea": 2, "local": 1 } }
+      ]
+    },
+    {
+      "id": 5,
+      "section": "goals",
+      "sectionLabel": "Your Goals & Next Steps",
+      "text": "Have you ever been told you might qualify for a gifted program?",
+      "icon": "💡",
+      "options": [
+        { "label": "Yes — I've already been tested or identified as gifted", "icon": "✅", "scores": { "gifted": 3 } },
+        { "label": "My teacher or parent has mentioned it as a possibility", "icon": "🙋", "scores": { "gifted": 2 } },
+        { "label": "I've wondered about it but never been assessed", "icon": "🤔", "scores": { "gifted": 1, "specialized": 1 } },
+        { "label": "Not really — that's not my situation", "icon": "👋", "scores": { "local": 1, "outofarea": 1 } }
+      ]
+    },
+    {
+      "id": 6,
+      "section": "goals",
+      "sectionLabel": "Your Goals & Next Steps",
+      "text": "Is there a specific type of program you've already been looking into?",
+      "icon": "🗺️",
+      "options": [
+        { "label": "Arts, Music, Drama, Dance, or Media", "icon": "🎭", "scores": { "specialized": 3 } },
+        { "label": "IB, French Immersion, or Technology/STEM", "icon": "📐", "scores": { "specialized": 2, "gifted": 1 } },
+        { "label": "A school outside my catchment (not a specialty program)", "icon": "🔄", "scores": { "outofarea": 3 } },
+        { "label": "I haven't looked into anything specific yet", "icon": "💭", "scores": { "local": 2, "outofarea": 1 } }
+      ]
+    }
+  ],
+  "sections": [
+    { "id": "interests", "label": "Your Interests & Strengths", "questionIds": [1, 2] },
+    { "id": "preferences", "label": "Your Preferences & Situation", "questionIds": [3, 4] },
+    { "id": "goals", "label": "Your Goals & Next Steps", "questionIds": [5, 6] }
+  ]
+}

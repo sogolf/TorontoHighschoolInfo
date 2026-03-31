@@ -1,0 +1,180 @@
+<%- include('header', { title: 'Explore Options', currentPage: 'explore' }) %>
+
+<!-- Page header -->
+<section style="background:var(--teal-900);color:var(--white);padding:3rem 0 2rem">
+  <div class="container">
+    <span class="section-label" style="background:rgba(255,255,255,.15);color:var(--amber-300)">All Options</span>
+    <h1 style="color:var(--white)">Explore Your High School Options</h1>
+    <p style="color:rgba(255,255,255,.8);max-width:560px">
+      Four different ways to start high school in Toronto — across TDSB and TCDSB. Each has its own application process, benefits, and trade-offs — get the full picture here.
+    </p>
+  </div>
+</section>
+
+<!-- Filter bar -->
+<div style="background:var(--gray-100);border-bottom:1px solid var(--gray-200);padding:.75rem 0" class="no-print">
+  <div class="container">
+    <div class="filter-bar" role="group" aria-label="Filter options">
+      <button class="filter-btn active" onclick="filterPathway('all', this)">All Options</button>
+      <% pathways.forEach(function(p) { %>
+      <button class="filter-btn" onclick="filterPathway('<%= p.id %>', this)"><%= p.emoji %> <%= p.label %></button>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="pathway-grid">
+
+      <!-- Option cards -->
+      <div class="pathway-cards" id="pathway-cards">
+        <% pathways.forEach(function(p) { %>
+        <div class="pathway-card" id="<%= p.id %>" data-pathway="<%= p.id %>">
+          <div class="pathway-card-header" style="border-bottom:3px solid <%= p.color %>">
+            <span class="pathway-emoji"><%= p.emoji %></span>
+            <div>
+              <h2><%= p.label %></h2>
+              <span class="pathway-code"><%= p.code %></span>
+            </div>
+          </div>
+          <div class="pathway-card-body">
+            <p><%- p.details %></p>
+
+            <div class="grid-2 mt-2" style="gap:1rem">
+              <div>
+                <h4 class="mb-1">✅ Pros</h4>
+                <ul style="font-size:.9rem">
+                  <% p.pros.forEach(function(pro) { %>
+                  <li><%= pro %></li>
+                  <% }) %>
+                </ul>
+              </div>
+              <div>
+                <h4 class="mb-1">⚠️ Cons</h4>
+                <ul style="font-size:.9rem;color:var(--gray-700)">
+                  <% p.cons.forEach(function(con) { %>
+                  <li><%= con %></li>
+                  <% }) %>
+                </ul>
+              </div>
+            </div>
+
+            <h4 class="mt-2 mb-1">📋 Application Process</h4>
+            <p style="font-size:.9rem;color:var(--gray-700)"><%- p.applicationProcess %></p>
+
+            <h4 class="mt-2 mb-1">👤 Who It's For</h4>
+            <p style="font-size:.9rem;color:var(--gray-700)"><%= p.whoItsFor %></p>
+
+            <h4 class="mt-2 mb-1">🔑 Key Features</h4>
+            <div class="pill-list">
+              <% p.keyFeatures.forEach(function(f) { %>
+              <span class="pill"><%= f %></span>
+              <% }) %>
+            </div>
+
+            <div class="info-box info-box-teal mt-2" style="font-size:.9rem">
+              <strong>Admission:</strong> <%= p.admissionAvg %>
+            </div>
+
+            <div class="mt-2">
+              <strong style="font-size:.9rem">Great if you value:</strong>
+              <div class="pill-list mt-1">
+                <% p.interests.forEach(function(i) { %>
+                <span class="pill pill-green"><%= i %></span>
+                <% }) %>
+              </div>
+            </div>
+
+            <div class="mt-2 no-print">
+              <a href="/quiz" class="btn btn-sm btn-primary">Check if this fits me →</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+
+      <!-- Specialized Programs Sidebar -->
+      <div class="shsm-sidebar">
+        <div class="shsm-card">
+          <div class="shsm-header">
+            <h3>🎨 Specialized Program Types</h3>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.8);margin-top:.4rem;margin-bottom:0">
+              Click any program type to learn what it involves and how to apply.
+            </p>
+          </div>
+          <div class="shsm-list">
+            <% shsm.programs.forEach(function(prog) { %>
+            <div class="shsm-item" onclick="showProgramDetail('<%= prog.id %>')" tabindex="0" role="button" aria-label="<%= prog.name %>">
+              <span class="shsm-item-icon"><%= prog.icon %></span>
+              <div>
+                <div class="shsm-item-name"><%= prog.name %></div>
+                <div style="font-size:.78rem;color:var(--gray-500)"><%= prog.applicationProcess.substring(0, 55) %>…</div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+          <div style="padding:.75rem 1.25rem;border-top:1px solid var(--gray-200)">
+            <a href="/about#specialized" class="btn btn-sm btn-outline btn-full">Application tips & deadlines</a>
+          </div>
+        </div>
+
+        <!-- Detail panel -->
+        <div id="program-detail" class="card mt-2 hidden">
+          <div id="program-detail-content"></div>
+        </div>
+
+        <!-- Program data for JS -->
+        <script id="program-data" type="application/json">
+          <%- JSON.stringify(shsm.programs) %>
+        </script>
+      </div>
+
+    </div><!-- .pathway-grid -->
+  </div>
+</section>
+
+<script>
+function filterPathway(id, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pathway-card').forEach(card => {
+    card.style.display = (id === 'all' || card.dataset.pathway === id) ? '' : 'none';
+  });
+}
+
+const programData = JSON.parse(document.getElementById('program-data').textContent);
+function showProgramDetail(id) {
+  const prog = programData.find(p => p.id === id);
+  if (!prog) return;
+  const detail = document.getElementById('program-detail');
+  const content = document.getElementById('program-detail-content');
+  content.innerHTML = `
+    <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+      <span style="font-size:2rem">${prog.icon}</span>
+      <h3 style="margin:0">${prog.name}</h3>
+    </div>
+    <p style="font-size:.9rem;color:var(--gray-700)">${prog.description}</p>
+    <strong style="font-size:.85rem;display:block;margin-top:.75rem">📋 How to Apply:</strong>
+    <p style="font-size:.85rem;color:var(--gray-700);margin-top:.3rem">${prog.applicationProcess}</p>
+    <strong style="font-size:.85rem;display:block;margin-top:.75rem">🎯 What to Expect:</strong>
+    <p style="font-size:.85rem;color:var(--gray-700);margin-top:.3rem">${prog.whatToExpect}</p>
+    ${prog.careers ? `
+    <strong style="font-size:.85rem;display:block;margin-top:.75rem">💼 Where It Leads:</strong>
+    <div class="pill-list" style="margin-top:.4rem">
+      ${prog.careers.map(c => `<span class="pill pill-amber">${c}</span>`).join('')}
+    </div>` : ''}
+  `;
+  detail.classList.remove('hidden');
+  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Support keyboard activation on SHSM items
+document.querySelectorAll('.shsm-item').forEach(item => {
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+  });
+});
+</script>
+
+<%- include('footer') %>

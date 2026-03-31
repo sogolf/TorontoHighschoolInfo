@@ -1,0 +1,142 @@
+<%- include('header', { title: 'Application Planner', currentPage: 'planner' }) %>
+
+<!-- Sticky controls bar -->
+<div class="planner-controls no-print">
+  <div class="container">
+    <div class="credit-counter">
+      <span>Tasks completed:</span>
+      <span class="credit-count" id="task-count">0</span>
+      <span style="color:var(--gray-500);font-size:.9rem" id="task-total">/ <%= courses.timeline.reduce((s,m) => s + m.tasks.length, 0) %> total</span>
+    </div>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+      <button onclick="window.print()" class="btn btn-sm btn-outline">🖨️ Print Checklist</button>
+      <button onclick="resetChecklist()" class="btn btn-sm btn-outline" style="color:var(--gray-500)">↺ Reset All</button>
+    </div>
+  </div>
+</div>
+
+<!-- Page title -->
+<div class="container section-sm">
+  <span class="section-label">Grade 8 → High School</span>
+  <h1>Application Planner</h1>
+  <p style="color:var(--gray-500);max-width:650px">
+    A month-by-month checklist of everything you need to do in Grade 8 to find and apply to your ideal high school. Check tasks off as you go — your progress is saved automatically.
+  </p>
+
+  <div class="info-box info-box-amber mt-2 mb-3 no-print">
+    <strong>⏰ Key deadline:</strong> Most specialized program applications close in <strong>January or February</strong> of your Grade 8 year. Start researching in September so you have time to prepare portfolios, auditions, or assessments.
+  </div>
+
+  <!-- Monthly checklist -->
+  <% courses.timeline.forEach(function(month, mi) { %>
+  <div class="faq-item checklist-month" id="month-<%= mi %>">
+    <div class="faq-question" onclick="toggleMonth(<%= mi %>)" role="button" tabindex="0" aria-expanded="false" id="month-toggle-<%= mi %>">
+      <span><%= month.emoji %> <strong><%= month.month %></strong> <span style="font-weight:400;color:var(--gray-500);font-size:.9rem">— <%= month.year %></span> <span class="month-progress" id="mprog-<%= mi %>" style="font-size:.8rem;color:var(--teal-700);margin-left:.5rem;font-weight:600"></span></span>
+    </div>
+    <div class="faq-answer checklist-body" id="month-body-<%= mi %>">
+      <p style="color:var(--gray-600);font-size:.9rem;margin-bottom:1rem"><em><%= month.description %></em></p>
+      <% month.tasks.forEach(function(task) { %>
+      <div class="checklist-task" id="task-wrap-<%= task.id %>">
+        <label class="checklist-label" for="<%= task.id %>">
+          <input type="checkbox" id="<%= task.id %>" data-task="<%= task.id %>" onchange="toggleTask(this)" class="checklist-checkbox">
+          <span class="checklist-text"><%= task.text %></span>
+        </label>
+        <div class="checklist-tip">💡 <em><%= task.tip %></em></div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+  <% }) %>
+
+  <hr class="divider">
+
+  <!-- School Comparison Tool -->
+  <h2 class="mb-1">School Comparison Tool</h2>
+  <p style="color:var(--gray-500);margin-bottom:1.5rem">Compare up to three schools or programs you're considering. Your notes are saved automatically.</p>
+
+  <div style="overflow-x:auto">
+    <table id="comparison-table" style="width:100%;border-collapse:collapse;font-size:.9rem">
+      <thead>
+        <tr>
+          <th style="padding:.6rem .8rem;background:var(--teal-900);color:var(--white);text-align:left;border-right:1px solid rgba(255,255,255,.1);width:140px">Criteria</th>
+          <% courses.comparisonCriteria.slice(0,1) %>
+          <% for(let si=1; si<=3; si++) { %>
+          <th style="padding:.6rem .8rem;background:var(--teal-900);color:var(--white);text-align:center;border-right:1px solid rgba(255,255,255,.1)">
+            <input type="text" placeholder="School <%= si %>" data-school="<%= si %>" class="school-name-input" onchange="saveComparison()" style="background:transparent;border:1px dashed rgba(255,255,255,.4);border-radius:4px;padding:.2rem .5rem;color:var(--white);width:100%;font-size:.85rem;text-align:center" aria-label="School <%= si %> name">
+          </th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <% courses.comparisonCriteria.forEach(function(crit, ci) { %>
+        <tr style="border-bottom:1px solid var(--gray-200);background:<%= ci % 2 === 0 ? 'var(--white)' : 'var(--gray-100)' %>">
+          <td style="padding:.6rem .8rem;font-weight:600;color:var(--gray-700);border-right:1px solid var(--gray-200)"><%= crit.label %></td>
+          <% for(let si=1; si<=3; si++) { %>
+          <td style="padding:.5rem .6rem;border-right:1px solid var(--gray-200)">
+            <input type="text" placeholder="Enter info…" data-school="<%= si %>" data-crit="<%= crit.id %>" class="comparison-cell" onchange="saveComparison()" style="width:100%;border:1px solid transparent;border-radius:4px;padding:.3rem .5rem;font-size:.85rem;background:transparent" aria-label="<%= crit.label %> for school <%= si %>">
+          </td>
+          <% } %>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-box info-box-teal mt-3 no-print">
+    <strong>💡 Tip:</strong> After filling out the table, print this page to bring to your guidance counselor or parent discussion. Your notes are saved in your browser.
+  </div>
+</div>
+
+<style>
+/* Checklist-specific styles */
+.checklist-task {
+  padding: .6rem .5rem .6rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.checklist-task:last-child { border-bottom: none; }
+.checklist-label {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  cursor: pointer;
+}
+.checklist-checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: .1rem;
+  accent-color: var(--teal-700);
+  cursor: pointer;
+}
+.checklist-text {
+  font-size: .95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.checklist-done .checklist-text {
+  text-decoration: line-through;
+  color: var(--gray-500);
+}
+.checklist-tip {
+  font-size: .82rem;
+  color: var(--gray-500);
+  margin-top: .35rem;
+  padding-left: 2rem;
+  line-height: 1.4;
+}
+.checklist-body { display: none; margin-top: .75rem; }
+.checklist-month.open .checklist-body { display: block; }
+.school-name-input:focus, .comparison-cell:focus {
+  outline: none;
+  border-color: var(--teal-500) !important;
+  background: var(--teal-50) !important;
+}
+@media print {
+  .checklist-body { display: block !important; }
+  .checklist-checkbox { appearance: none; width: 14px; height: 14px; border: 2px solid #333; display: inline-block; vertical-align: middle; }
+  .checklist-checkbox:checked::after { content: '✓'; display: block; font-size: 12px; line-height: 1; margin-top: -2px; margin-left: 1px; }
+}
+</style>
+
+<script src="/js/planner.js"></script>
+<%- include('footer') %>

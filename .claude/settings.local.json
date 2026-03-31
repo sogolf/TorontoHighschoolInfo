@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(/usr/local/bin/node:*)",
+      "Bash(echo exit: $?:*)",
+      "Bash(npm install:*)",
+      "Bash(mdfind:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(export:*)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:www.tcdsb.org)"
+    ]
+  }
+}

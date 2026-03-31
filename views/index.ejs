@@ -1,0 +1,133 @@
+<%- include('header', { title: 'Home', currentPage: 'home' }) %>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Free · For Grade 8 Students · Toronto TDSB & TCDSB</div>
+    <h1>Find Your Perfect<br>Toronto High School</h1>
+    <p class="hero-sub">
+      Local school, specialized program, out-of-area transfer, or gifted class — take our 5-minute quiz to discover which option fits you best, then build your application plan.
+    </p>
+    <div class="hero-ctas">
+      <a href="/quiz" class="btn btn-secondary btn-lg">🎯 Take the Quiz (5 min)</a>
+      <a href="/explore" class="btn btn-white btn-lg">🗺️ Explore Options</a>
+      <a href="/planner" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.6);color:var(--white)">📋 Application Planner</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4 option cards -->
+<section class="section" style="background:var(--gray-100)">
+  <div class="container">
+    <div class="text-center mb-3">
+      <span class="section-label">4 High School Options</span>
+      <h2 class="section-title">Where Will Grade 9 Take You?</h2>
+      <p class="section-sub">Toronto Grade 8 students in TDSB and TCDSB have more choices than just their home school. Here's the full picture.</p>
+    </div>
+    <div class="grid-4">
+      <% pathways.forEach(function(p) { %>
+      <a href="/explore#<%= p.id %>" class="card" style="border-top:4px solid <%= p.color %>;text-decoration:none;color:inherit">
+        <div class="card-icon"><%= p.emoji %></div>
+        <div class="card-title"><%= p.label %></div>
+        <div class="card-desc"><%= p.description.substring(0, 115) %>…</div>
+        <div class="mt-2">
+          <span class="tag"><%= p.code %></span>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-3">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">Three Steps to Clarity</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Answer 12 Questions</div>
+        <p>Tell us about your interests, your preferences, and what matters most to you — no wrong answers, no grades involved.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Get Your Recommendation</div>
+        <p>See which high school option fits you best, with a score breakdown showing how you ranked across all four options.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Plan Your Application</div>
+        <p>Use the month-by-month Application Planner to track every task — from Open Houses to acceptance day.</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="/quiz" class="btn btn-primary btn-lg">Start the Quiz →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Specialized program spotlight -->
+<section class="section" style="background:var(--teal-900);color:var(--white)">
+  <div class="container">
+    <div class="text-center mb-3">
+      <span class="section-label" style="background:rgba(255,255,255,.15);color:var(--amber-300)">Did You Know?</span>
+      <h2 style="color:var(--white);margin-bottom:.5rem">Specialized Programs Open in November</h2>
+      <p style="color:rgba(255,255,255,.8);max-width:600px;margin:0 auto 1.5rem">
+        Both TDSB and TCDSB open specialized program applications in <strong>November or December</strong> of your Grade 8 year, with deadlines in January or February. That means now is the time to start researching.
+      </p>
+    </div>
+    <div class="grid-4" style="gap:1rem">
+      <div style="background:rgba(255,255,255,.1);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.8rem">🎨</div>
+        <div style="font-weight:700;margin:.4rem 0;color:var(--white)">Arts Programs</div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.75)">Visual Art, Music, Drama, Dance, Media Arts</div>
+      </div>
+      <div style="background:rgba(255,255,255,.1);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.8rem">🌐</div>
+        <div style="font-weight:700;margin:.4rem 0;color:var(--white)">IB Programme</div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.75)">Globally recognized, university-prep diploma</div>
+      </div>
+      <div style="background:rgba(255,255,255,.1);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.8rem">💻</div>
+        <div style="font-weight:700;margin:.4rem 0;color:var(--white)">STEM / Tech</div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.75)">Coding, robotics, engineering design</div>
+      </div>
+      <div style="background:rgba(255,255,255,.1);border-radius:var(--radius);padding:1.25rem;text-align:center">
+        <div style="font-size:1.8rem">⚽</div>
+        <div style="font-weight:700;margin:.4rem 0;color:var(--white)">Elite Sports</div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.75)">Train at an elite level and earn your OSSD</div>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <a href="/explore" class="btn btn-secondary">Explore All Program Types →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Quick stats -->
+<section class="section-sm">
+  <div class="container">
+    <div class="grid-3" style="text-align:center">
+      <div>
+        <div style="font-size:2rem;font-weight:800;color:var(--teal-700)">100+</div>
+        <div style="font-weight:600">Toronto High Schools</div>
+        <div style="color:var(--gray-500);font-size:.9rem">Across TDSB and TCDSB</div>
+      </div>
+      <div>
+        <div style="font-size:2rem;font-weight:800;color:var(--amber-500)">8+</div>
+        <div style="font-weight:600">Specialized Program Types</div>
+        <div style="color:var(--gray-500);font-size:.9rem">Arts, IB, STEM, Sports, French, and more</div>
+      </div>
+      <div>
+        <div style="font-size:2rem;font-weight:800;color:var(--purple-700)">Nov–Jan</div>
+        <div style="font-weight:600">Application Season</div>
+        <div style="color:var(--gray-500);font-size:.9rem">Most specialized program deadlines</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('footer') %>

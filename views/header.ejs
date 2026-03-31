@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' ? title + ' — ' : '' %>Find your Highschool</title>
+  <meta name="description" content="Discover your ideal Toronto high school — TDSB or TCDSB local school, specialized program, out-of-area transfer, or gifted class. Free interactive quiz and application planner.">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+  <%- typeof extraHead !== 'undefined' ? extraHead : '' %>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a href="/" class="navbar-brand">🧭 Find your <span>Highschool</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+      onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links" role="list">
+      <li><a href="/" class="<%= typeof currentPage !== 'undefined' && currentPage==='home'    ? 'active':'' %>">Home</a></li>
+<li><a href="/explore" class="<%= typeof currentPage !== 'undefined' && currentPage==='explore' ? 'active':'' %>">Explore Options</a></li>
+      <li><a href="/planner" class="<%= typeof currentPage !== 'undefined' && currentPage==='planner' ? 'active':'' %>">Application Planner</a></li>
+      <li><a href="/about" class="<%= typeof currentPage !== 'undefined' && currentPage==='about'   ? 'active':'' %>">About</a></li>
+      <li><a href="/quiz" class="nav-cta">Find My Path →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
